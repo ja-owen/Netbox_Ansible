@@ -8,13 +8,16 @@
       netbox_ip_address:
         netbox_url: http://192.168.0.130
         netbox_token: 27172995b1a594f5ac038491dd531af73a562479
+        validate_certs: no
         data:
           prefix: 192.168.0.0/24
         state: new
+      delegate_to: localhost
     - name: Delete IP address within netbox
       netbox_ip_address:
         netbox_url: http://192.168.0.130
         netbox_token: 27172995b1a594f5ac038491dd531af73a562479
+        validate_certs: no
         data:
           address: 192.168.1.10
         state: absent
@@ -22,6 +25,7 @@
       netbox_ip_address:
         netbox_url: http://192.168.0.130
         netbox_token: 27172995b1a594f5ac038491dd531af73a562479
+        validate_certs: no
         data:
           family: 4
           address: 192.168.0.20
@@ -37,6 +41,7 @@
       netbox_ip_address:
         netbox_url: http://192.168.0.130
         netbox_token: 27172995b1a594f5ac038491dd531af73a562479
+        validate_certs: no
         data:
           prefix: 192.168.0.0/24
           vrf: Test

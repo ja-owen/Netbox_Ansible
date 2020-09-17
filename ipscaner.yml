@@ -20,7 +20,7 @@
         state: absent
     - name: Create IP address with several specified options
       netbox_ip_address:
-        netbox_url: http://netbox.local
+        netbox_url: http://192.168.0.130
         netbox_token: 27172995b1a594f5ac038491dd531af73a562479
         data:
           family: 4

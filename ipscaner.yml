@@ -1,6 +1,6 @@
 - name: "Test Netbox IP address module"
   connection: local
-  hosts: all
+  hosts: localhost
   gather_facts: False
 
   tasks:
@@ -12,7 +12,7 @@
         data:
           prefix: 192.168.0.0/24
         state: new
-      delegate_to: localhost
+      #delegate_to: localhost
     - name: Delete IP address within netbox
       netbox_ip_address:
         netbox_url: http://192.168.0.130

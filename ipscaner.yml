@@ -1,6 +1,6 @@
 - name: "Test Netbox IP address module"
   connection: local
-  hosts: localhost
+  hosts: all
   gather_facts: False
 
   tasks:
@@ -9,7 +9,7 @@
         netbox_url: http://192.168.0.130
         netbox_token: 27172995b1a594f5ac038491dd531af73a562479
         data:
-          address: 192.168.1.10
+          address: 192.168.0.10
         state: present
     - name: Force to create (even if it already exists) the IP
       netbox_ip_address:

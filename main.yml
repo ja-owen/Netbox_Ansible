@@ -1,0 +1,14 @@
+- name: Create IP Prefixes
+  netbox_prefix:
+    netbox_token: "{{ netbox_token }}"
+    netbox_url: "{{ netbox_url }}"
+    data:
+      prefix: "{{ item.prefix }}"
+      site: "{{ item.site | default(omit) }}"
+      status: Active
+    state: "{{ netbox_state }}"
+  loop: "{{ subnets }}"
+  loop_control:
+  label: "{{ item.prefix }}"
+  run_once: yes
+  tags: netbox_prefix

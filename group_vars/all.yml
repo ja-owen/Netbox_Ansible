@@ -1,3 +1,7 @@
+sites:
+  - name: shlbsite
+    description: "Main Data Center in Shlisselburg"
+    location: Shlisselburg
 subnets:
  - prefix: 192.168.0.0/24
    role: main

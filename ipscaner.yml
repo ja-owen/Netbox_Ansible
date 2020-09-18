@@ -6,8 +6,8 @@
   tasks:
     - name: Create prefix within Netbox with only required information
       netbox_prefix:
-        netbox_url: "{{ netbox_token }}/api/"
-        netbox_token: "{{ netbox_url }}"
+        netbox_url: "{{ netbox_url }}/api/"
+        netbox_token: "{{ netbox_token }}"
         data:
           prefix: 192.168.5.0/24
         state: present

@@ -1,0 +1,8 @@
+subnets:
+ - prefix: 192.168.0.0/24
+   role: main
+   site: shlbsite
+ - prefix: 192.168.1.0/24
+   role: vpn
+   site: shlbsite
+ 

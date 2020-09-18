@@ -1,6 +1,6 @@
 - name: "Test Netbox IP address module"
   connection: local
-  hosts: all
+  hosts: localhost
   gather_facts: False
 
   tasks:

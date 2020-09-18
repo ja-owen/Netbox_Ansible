@@ -1,15 +1,14 @@
-- name: "Test Netbox IP address module"
+- name: "Test Netbox prefix module"
   connection: local
   hosts: localhost
   gather_facts: False
 
   tasks:
-    - name: Get a new available IP inside 192.168.0.0/24
-      netbox_ip_address:
-        netbox_url: http://192.168.0.130
-        netbox_token: 27172995b1a594f5ac038491dd531af73a562479
-        validate_certs: no
+    - name: Create prefix within Netbox with only required information
+      netbox_prefix:
+        netbox_url: "{{ netbox_token }}"
+        netbox_token: "{{ netbox_url }}"
         data:
-          address: 192.168.1.10
-        state: new
-      #delegate_to: localhost
+          prefix: 192.168.5.0/24
+        state: present
+

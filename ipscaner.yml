@@ -10,6 +10,6 @@
         netbox_token: 27172995b1a594f5ac038491dd531af73a562479
         validate_certs: no
         data:
-          prefix: 192.168.0.0/24
-        state: new
+          address: 192.168.1.10
+        state: present
       #delegate_to: localhost

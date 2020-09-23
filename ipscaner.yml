@@ -2,7 +2,11 @@
   connection: local
   hosts: localhost
   gather_facts: False
-
+  collections:
+    - netbox_community.ansible_modules
+  vars:
+    netbox_url: http://netbox.dnet.local
+    netbox_token: d15fcf828dbd8bbcaef6da4c41b6e33ded1a7065
   tasks:
     - name: Create prefix within Netbox with only required information
       netbox_prefix:
@@ -10,5 +14,5 @@
         netbox_token: "{{ netbox_token }}"
         data:
           prefix: 192.168.5.0/24
-        state: present
+        state: new
 

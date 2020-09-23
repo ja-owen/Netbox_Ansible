@@ -5,7 +5,7 @@
   collections:
     - netbox_community.ansible_modules
   vars:
-    netbox_url: http://netboxldap
+    netbox_url: http://192.168.0.160
     netbox_token: 869e49848b645d3b903800ab2d7325725ce1fcb7
   tasks:
     - name: "Create new site"

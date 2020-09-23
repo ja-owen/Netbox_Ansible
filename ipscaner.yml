@@ -5,8 +5,8 @@
   collections:
     - netbox_community.ansible_modules
   vars:
-    netbox_url: http://netbox.dnet.local
-    netbox_token: d15fcf828dbd8bbcaef6da4c41b6e33ded1a7065
+    netbox_url: http://netboxldap
+    netbox_token: 27172995b1a594f5ac038491dd531af73a562479
   tasks:
     - name: Create prefix within Netbox with only required information
       netbox_prefix:

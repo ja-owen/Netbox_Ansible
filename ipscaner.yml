@@ -6,7 +6,7 @@
     - netbox_community.ansible_modules
   vars:
     netbox_url: http://netboxldap
-    netbox_token: 27172995b1a594f5ac038491dd531af73a562479
+    netbox_token: 869e49848b645d3b903800ab2d7325725ce1fcb7
   tasks:
     - name: Create prefix within Netbox with only required information
       netbox_prefix:

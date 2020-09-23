@@ -15,5 +15,6 @@
         data:
           name: "Ansible Test Site"
         state: present
+        validate_certs: false
       register: "site"
 

@@ -11,4 +11,5 @@ sites:
     location: Riyadh
 device_model: Cisco 1941
 device_role: Cisco_Core
+device: R1
 vendor: Arista

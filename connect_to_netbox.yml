@@ -1,1 +1,9 @@
-
+---
+  - name: Initial Playbook
+    hosts: all
+    gather_facts: no
+    tasks:
+      - name: Create NetBox Sites
+          netbox_site:
+            netbox_token: "{{ netbox_token }}"
+            netbox_url: "{{ netbox_url }}"

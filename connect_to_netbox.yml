@@ -1,9 +1,9 @@
 ---
   - name: Initial Playbook
-    hosts: all
+    hosts: localhost
+    connection: local
     gather_facts: no
-    vars:
-      ansible_connection: local
+    
     tasks:
       - name: NetBox Device // Get Existing Vendors
         uri:

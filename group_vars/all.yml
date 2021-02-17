@@ -1,6 +1,7 @@
 ---
 netbox_url: http://192.168.0.160
 netbox_token: 88a5fdbd9305b1c27b1bd6080b6d8c8da209e9b3
+netbox_state: present
 sites:
   - name: DC1
     description: "Main Data Center in Sydney"

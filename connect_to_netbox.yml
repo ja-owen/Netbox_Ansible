@@ -2,8 +2,18 @@
   - name: Initial Playbook
     hosts: all
     gather_facts: no
+    vars:
+      ansible_connection: local
     tasks:
       - name: Create NetBox Sites
-          netbox_site:
-            netbox_token: "{{ netbox_token }}"
-            netbox_url: "{{ netbox_url }}"
+        netbox_site:
+          netbox_token: "{{ netbox_token }}"
+          netbox_url: "{{ netbox_url }}"
+          data:
+            name: "{{ item.name | lower }}"
+            description: "{{ item.description | default(omit) }}"
+            physical_address: "{{ item.location | default(omit) }}"
+          state: "{{ netbox_state }}"
+        loop: "{{ sites }}"
+        run_once: yes
+        tags: netbox_sites

@@ -14,4 +14,4 @@
             device_role: "{{ device_role }}"
             device_type: "{{ device_model }}"
             site: "{{ Site }}"
-            status: Present
+            status: Active

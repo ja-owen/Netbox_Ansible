@@ -5,4 +5,5 @@ netbox_state: present
 device: R2
 device_model: 1941
 device_role: Cisco_Core
+Site: spb
 

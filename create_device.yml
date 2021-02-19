@@ -1,7 +1,14 @@
-name: Provision NetBox Devices
-netbox_device:
-data:
-name: "{{ inventory_hostname }}"
-device_role: "{{ device_role }}"
-device_type: "{{ device_model }}"
-status: Active
+---
+  - name: Initial Playbook
+    hosts: localhost
+    connection: local
+    gather_facts: no
+    
+    tasks:
+      - name: Provision NetBox Devices
+        netbox_device:
+        data:
+          name: "{{ inventory_hostname }}"
+          device_role: "{{ device_role }}"
+          device_type: "{{ device_model }}"
+        status: Active

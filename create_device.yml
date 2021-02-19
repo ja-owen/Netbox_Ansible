@@ -1,18 +1,7 @@
-- name: NetBox Device // Create Device Vendors
-  uri:
-    url: "{{ netbox_url }}/api/dcim/manufacturers/"
-    method: POST
-    headers:
-      Authorization: "Token {{ netbox_token }}"
-      Accept: 'application/json'
-    return_content: yes
-    body_format: json
-    body:
-      name: "{{ device }}"
-      slug: "{{ device | lower }}"
-      status_code: [200, 201]
-  when:
-    - netbox_vendors.json.count == 0
-    - netbox_state == 'present'
-  run_once: yes
-  tags: device_vendors
+name: Provision NetBox Devices
+netbox_device:
+data:
+name: "{{ inventory_hostname }}"
+device_role: "{{ device_role }}"
+device_type: "{{ device_model }}"
+status: Active

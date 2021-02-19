@@ -13,5 +13,5 @@
           name: "{{ device }}"
           device_role: "{{ device_role }}"
           device_type: "{{ device_model }}"
-          site: {{ site }}
-        status: {}
+          site: {{ Site }}
+        status: Present

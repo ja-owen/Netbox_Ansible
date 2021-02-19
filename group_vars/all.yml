@@ -4,5 +4,5 @@ netbox_token: 88a5fdbd9305b1c27b1bd6080b6d8c8da209e9b3
 netbox_state: present
 device: R2
 device_model: 1941
-device_role: Cisco_core
+device_role: Cisco_Core
 

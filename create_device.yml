@@ -19,3 +19,19 @@
         register: netbox_device
         tags: netbox_devices
       
+      - name: NetBox Device // Get Existing Vendors
+        uri:
+          url: "{{ netbox_url }}/api/dcim/manufacturers/?name={{ device }}"
+          method: POST
+          headers:
+            Authorization: "Token {{ netbox_token }}"
+            Accept: 'application/json'
+          body_format: json
+          body:
+            name: "{{ inventory_hostname }}"
+            device_role: "{{ device_role }}"
+            device_type: "{{ device_model }}"
+            status: Active
+          status_code: [200, 201]
+
+      

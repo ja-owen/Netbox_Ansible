@@ -4,6 +4,6 @@ netbox_token: 88a5fdbd9305b1c27b1bd6080b6d8c8da209e9b3
 netbox_state: present
 device: R3
 device_model: 4
-device_role: 0
-site: spb
+device_role: 6
+site: 7
 

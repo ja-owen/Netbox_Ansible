@@ -30,7 +30,7 @@
             name: "{{ device }}"
             slug: "{{ device | lower }}"
             device_role: "{{ device_role }}"
-            device_model: "{{ device_model }}"
+            device_type: "{{ device_model }}"
             status: Active
           status_code: [200, 201]
         when:

@@ -31,7 +31,6 @@
             slug: "{{ device | lower }}"
             device_role: "{{ device_role }}"
             device_type: "{{ device_model }}"
-            status: Active
             site: "{{ site }}"
           status_code: [200, 201]
         when:

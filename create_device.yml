@@ -7,7 +7,7 @@
     tasks:
       - name: NetBox Device // Get Existing Vendors
         uri:
-          url: "{{ netbox_url }}/api/dcim/manufacturers/?name={{ device }}"
+          url: "{{ netbox_url }}/api/dcim/devices/?name={{ device }}"
           method: GET
           headers:
             Authorization: "Token {{ netbox_token }}"
@@ -20,14 +20,14 @@
 
       - name: Create device
         uri:
-          url: "{{ netbox_url }}/api/dcim/manufacturers/?name={{ device }}"
+          url: "{{ netbox_url }}/api/dcim/devices/?name={{ device }}"
           method: POST
           headers:
             Authorization: "Token {{ netbox_token }}"
             Accept: 'application/json'
           body_format: json
           body:
-            name: "{{ inventory_hostname }}"
+            name: "{{ device }}"
             slug: "{{ device | lower }}"
             device_role: "{{ device_role }}"
             device_type: "{{ device_model }}"

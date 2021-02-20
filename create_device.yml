@@ -15,9 +15,14 @@
           body_format: json
           body:
             name: "{{ inventory_hostname }}"
+            slug: "{{ device | lower }}"
             device_role: "{{ device_role }}"
             device_type: "{{ device_model }}"
             status: Active
           status_code: [200, 201]
+        when:
+          - netbox_vendors.json.count == 0
+          - netbox_state == 'present'
+        run_once: yes
 
       

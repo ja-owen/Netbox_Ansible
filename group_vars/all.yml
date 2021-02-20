@@ -6,4 +6,5 @@ device: R3
 device_model: 4
 device_role: 6
 site: 7
+status: active
 

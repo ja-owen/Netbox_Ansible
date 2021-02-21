@@ -33,10 +33,10 @@
             device_type: "{{ device_model }}"
             site: "{{ site }}"
             status: "{{ active }}""
-          status_code: [200, 201]
-        when:
-          - netbox_vendors.json.count == 0
-          - netbox_state == 'present'
-        run_once: yes
+            status_code: [200, 201]
+          when:
+            - netbox_vendors.json.count == 0
+            - netbox_state == 'present'
+          run_once: yes
 
       

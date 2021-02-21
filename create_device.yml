@@ -32,7 +32,7 @@
             device_role: "{{ device_role }}"
             device_type: "{{ device_model }}"
             site: "{{ site }}"
-            status: "{{ active }}"
+            status: "{{ status }}"
           status_code: [200, 201]
         when:
           - netbox_vendors.json.count == 0

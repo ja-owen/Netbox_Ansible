@@ -1,1 +1,27 @@
-
+---
+  - name: Initial Playbook
+    hosts: localhost
+    connection: local
+    gather_facts: no
+    
+    tasks:
+      -name: Create device
+         uri:
+          url: "{{ netbox_url }}/api/dcim/devices/?name={{ device }}"
+          method: POST
+          headers:
+            Authorization: "Token {{ netbox_token }}"
+            Accept: 'application/json'
+          body_format: json
+          body:
+            name: "{{ device }}"
+            slug: "{{ device | lower }}"
+            device_role: "{{ device_role }}"
+            device_type: "{{ device_model }}"
+            site: "{{ site }}"
+            status: "{{ status }}"
+          status_code: [200, 201]
+        when:
+          - netbox_vendors.json.count == 0
+          - netbox_state == 'present'
+        run_once: yes

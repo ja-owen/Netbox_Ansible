@@ -18,8 +18,8 @@
             name: "{{ interfaces }}"
 #            type: 0
             status_code: [200, 201]
-        with_items: 
-          - "{{ interfaces }}"
+          with_items: 
+            - "{{ interfaces }}"
         when:
           - 
 #          - netbox_vendors.json.count == 0

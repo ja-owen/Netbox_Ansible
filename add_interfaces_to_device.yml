@@ -19,7 +19,7 @@
  #           device_role: "{{ device_role }}"
  #           device_type: "{{ device_model }}"
             site: "{{ site }}"
-            type: 0
+            type: virtual
             status_code: [200, 201]
         loop: "{{ interfaces }}"
  #       when:

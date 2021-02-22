@@ -11,5 +11,4 @@ hostname: R3
 interfaces:
     - Ethernet0/1
     - Ethernet0/2
-    - Ethernet0/3
 

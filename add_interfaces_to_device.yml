@@ -7,7 +7,7 @@
     tasks:
       - name: Create interfaces
         uri:
-          url: "{{ netbox_url }}/api/dcim/devices/?name={{ interfaces }}"
+          url: "{{ netbox_url }}/api/dcim/devices/?name={{ item.interfaces }}"
           method: POST
           headers:
             Authorization: "Token {{ netbox_token }}"

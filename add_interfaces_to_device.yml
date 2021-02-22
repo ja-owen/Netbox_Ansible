@@ -16,8 +16,6 @@
           body:
             device: 4
             name: "{{ item }}"
- #           device_role: "{{ device_role }}"
- #           device_type: "{{ device_model }}"
             site: "{{ site }}"
             type: virtual
             status_code: [200, 201]

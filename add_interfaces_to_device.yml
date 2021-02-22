@@ -7,7 +7,7 @@
     tasks:
       - name: Create interfaces
         uri:
-          url: "{{ netbox_url }}/api/dcim/devices/?name={{ device }}"
+          url: "{{ netbox_url }}/api/dcim/devices/?name={{ interfaces }}"
           method: POST
           headers:
             Authorization: "Token {{ netbox_token }}"
@@ -16,6 +16,7 @@
           body:
             device: "{{ hostname }}"
             name: "{{ interfaces }}"
+            type: 0
             status_code: [200, 201]
         when:
 #          - netbox_vendors.json.count == 0

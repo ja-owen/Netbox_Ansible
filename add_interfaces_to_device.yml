@@ -14,10 +14,10 @@
             Accept: 'application/json'
           body_format: json
           body:
-            device: "{{ hostname }}"
+            device: 4
             name: "{{ item }}"
-            device_role: "{{ device_role }}"
-            device_type: "{{ device_model }}"
+ #           device_role: "{{ device_role }}"
+ #           device_type: "{{ device_model }}"
             site: "{{ site }}"
             type: 0
             status_code: [200, 201]

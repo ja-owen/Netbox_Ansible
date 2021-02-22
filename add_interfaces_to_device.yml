@@ -16,9 +16,9 @@
           body:
             device: "{{ hostname }}"
             name: "{{ interfaces }}"
-            type: 0
+#            type: 0
             status_code: [200, 201]
-        loop: "{{ interfaces[item] }}"
+        loop: "{{ interfaces }}"
         when:
 #          - netbox_vendors.json.count == 0
           - netbox_state == 'present'

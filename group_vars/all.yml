@@ -7,4 +7,9 @@ device_model: 4
 device_role: 6
 site: 7
 status: active
+hostname: R3
+interfaces:
+    - Ethernet0/1
+    - Ethernet0/2
+    - Ethernet0/3
 

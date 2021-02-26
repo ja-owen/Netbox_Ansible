@@ -1,1 +1,20 @@
-
+---
+  - name: Initial Playbook
+    hosts: localhost
+    connection: local
+    gather_facts: no
+    
+    tasks:
+      - name: NetBox Device // Get Existing Vendors
+        uri:
+          url: "{{ netbox_url }}/api/dcim/manufacturers/?name={{ device }}"
+          method: GET
+          headers:
+            Authorization: "Token {{ netbox_token }}"
+            Accept: 'application/json'
+          return_content: yes
+          body_format: json
+          status_code: [200, 201]
+        register: netbox_vendors
+        run_once: yes
+        tags: device_vendors

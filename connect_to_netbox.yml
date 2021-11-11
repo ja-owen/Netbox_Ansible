@@ -7,7 +7,7 @@
     tasks:
       - name: NetBox Device // Get Existing Devices
         uri:
-          url: "{{ netbox_url }}/api/dcim/devices/
+          url: "{{ netbox_url }}"/api/dcim/devices/
           method: GET
           headers:
             Authorization: "Token {{ netbox_token }}"

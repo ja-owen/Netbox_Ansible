@@ -6,7 +6,7 @@
     
     tasks:
      - name: get netbox devices
-     netbox.netbox.nb_inventory:
+     - netbox.netbox.nb_inventory:
           api_endpoint: http://10.20.100.251
           token: afc139a2f1cf2dd545f4fcb9edeebf175abbe4f4
           group_by:

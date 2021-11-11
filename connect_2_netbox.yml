@@ -13,6 +13,5 @@
            - device_roles
            - sites
           validate_certs: false
-      - name: get netbox inventory
-        ansible-inventory --list -i inventory.yml
+
         

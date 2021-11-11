@@ -5,9 +5,9 @@
     gather_facts: no
     
     tasks:
-      - name: NetBox Device // Get Existing Vendors
+      - name: NetBox Device // Get Existing Devices
         uri:
-          url: "{{ netbox_url }}/api/dcim/manufacturers/?name={{ device }}"
+          url: "{{ netbox_url }}/api/dcim/devices/?name={{ device }}"
           method: GET
           headers:
             Authorization: "Token {{ netbox_token }}"

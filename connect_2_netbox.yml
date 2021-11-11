@@ -5,13 +5,14 @@
     gather_facts: no
     
     tasks:
-     - name: get netbox devices
-          plugin: netbox.netbox.nb_inventory
+     - name: connect to netbox plugin
+       netbox.netbox.nb_inventory:
           api_endpoint: http://10.20.100.251
           token: afc139a2f1cf2dd545f4fcb9edeebf175abbe4f4
           group_by:
            - device_roles
            - sites
           validate_certs: false
-          
+      - name: get netbox inventory
+        ansible-inventory --list -i inventory.yml
         

@@ -1,9 +1,10 @@
 ---
-netbox_url: http://192.168.0.160:8001
-netbox_token: 88a5fdbd9305b1c27b1bd6080b6d8c8da209e9b3
+netbox_url: http://10.20.100.251
+netbox_token: afc139a2f1cf2dd545f4fcb9edeebf175abbe4f4
 netbox_state: present
-device: R4
-device_model: 4
-device_role: 6
-site: 7
 status: active
+validate_certs: false
+group_by:
+  - location
+  - site
+  - device_type

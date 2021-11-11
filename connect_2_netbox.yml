@@ -1,8 +1,8 @@
 ---
-  - name: Netbox inventory playbook
-    hosts: localhost
-    connection: local
-    gather_facts: no
+- name: Netbox inventory playbook
+  hosts: localhost
+  connection: local
+  gather_facts: no
     
     tasks:
      - name: connect to netbox plugin
